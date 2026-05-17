@@ -1,6 +1,29 @@
 -- ============================================================
+--                       :::!~!!!!!:.
+--                   .xUHWH!! !!?M88WHX:.
+--                 .X*#M@$!!  !X!M$$$$$$WWx:.
+--                :!!!!!!?H! :!$!$$$$$$$$$$8X:
+--               !!~  ~:~!! :~!$!#$$$$$$$$$$8X:
+--              :!~::!H!<   ~.U$X!?R$$$$$$$$MM!
+--              ~!~!!!!~~ .:XW$$$U!!?$$$$$$RMM!
+--                !:~~~ .:!M"T#$$$$WX??#MRRMMM!
+--                ~?WuxiW*`   `"#$$$$8!!!!??!!!
+--              :X- M$$$$       `"T#$T~!8$WUXU~
+--             :%`  ~#$$$m:        ~!~ ?$$$$$$
+--           :!`.-   ~T$$$$8xx.  .xWW- ~""##*"
+-- .....   -~~:<` !    ~?T#$$@@W@*?$$      /`
+-- W$@@M!!! .!~~ !!     .:XUW$W!~ `"~:    :
+-- #"~~`.:x%`!!  !H:   !WM$$$$Ti.: .!WUn+!`
+-- :::~:!!`:X~ .: ?H.!u "$$$B$$$!W:U!T$$M~
+-- .~~   :X@!.-~   ?@WTWo("*$$$W$TH$! `
+-- Wi.~!X$?!-~    : ?$$$B$Wu("**$RM!
+-- $R@i.~~ !     :   ~$$$$$B$$en:``
+-- ?MXT@Wx.~    :     ~"##*$$$$M~
+-- ============================================================
 -- Rainbow Six Siege Recoil Helper
 -- Logitech G HUB Lua Script
+-- Last updated: 05-17-2026
+-- Includes: Solid Snake (Y11S1), Denari (Y11S2), Skopos (Y10S3)
 -- ============================================================
 -- HOW TO USE:
 --   - Hold MOUSE4 (side button) + scroll wheel to cycle operators
@@ -137,6 +160,11 @@ local weapons = {
     ["SMG-11"]          = { timing = 4,  has_acog = false },
     ["SMG-12"]          = { timing = 4,  has_acog = false },
     ["SPSMG9"]          = { timing = 6,  has_acog = false },
+    -- Y11S1 - Solid Snake (Operation Silent Hunt)
+    ["PMR90A2"]         = { timing = 13, has_acog = true  }, -- DMR, semi-auto
+    ["TACIT .45"]       = { timing = 12, has_acog = false }, -- integrated suppressor pistol
+    -- Y11S2 - Denali (Operation High Stakes)
+    ["GLAIVE-12"]       = { timing = 20, has_acog = false }, -- shotgun, excluded from RCS
 }
 
 -- ============================================================
@@ -180,6 +208,8 @@ local attackers = {
     { name="Brava",      p={ "PARA-308", "CAMRS" },       s={ "SUPER SHORTY", "USP40" }   },
     { name="Ram",        p={ "R4-C", "LMG-E" },           s={ "MK1 9mm", "ITA12S" }       },
     { name="Deimos",     p={ "AK-74M", "M590A1" },        s={ ".44 Vendetta" }             },
+    -- Y11S1 - Operation Silent Hunt
+    { name="Solid Snake", p={ "F2", "PMR90A2" },           s={ "TACIT .45" }                },
 }
 
 local defenders = {
@@ -220,6 +250,8 @@ local defenders = {
     { name="Fenrir",      p={ "MP7", "SASG-12" },            s={ "Bailiff 410", "5.7 USG" }       },
     { name="Tuberao",     p={ "MPX", "AR-15.50" },           s={ "P226 MK 25" }                   },
     { name="Skopos",      p={ "PCX-33" },                    s={ "P229" }                         },
+    -- Y11S2 - Operation High Stakes
+    { name="Denari",      p={ "SCORPION EVO 3 A1", "FMG-9" }, s={ "GLAIVE-12" }               },
 }
 
 -- ============================================================
